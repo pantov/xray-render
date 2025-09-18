@@ -1,10 +1,9 @@
-﻿FROM teddysun/xray
+FROM teddysun/xray:latest
 
-# Копируем конфиг
+# ������ ����� � /etc/xray/config.json
 COPY config.json /etc/xray/config.json
 
-# Открываем порт
+EXPOSE 80
 EXPOSE 443
 
-# Запуск Xray
-CMD ["/usr/bin/xray", "-config", "/etc/xray/config.json"]
+CMD ["xray", "-config", "/etc/xray/config.json"]

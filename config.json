@@ -1,13 +1,12 @@
-﻿{
+{
   "inbounds": [
     {
-      "port": 443,
-      "listen": "0.0.0.0",
+      "port": 80,
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "id": "f265689d-68ab-4cc3-b50a-e11eb3d3b573",
+            "id": "YOUR-UUID-HERE",
             "level": 0,
             "email": "user@example.com"
           }
@@ -16,7 +15,6 @@
       },
       "streamSettings": {
         "network": "ws",
-        "security": "tls",
         "wsSettings": {
           "path": "/ws"
         }
@@ -24,6 +22,9 @@
     }
   ],
   "outbounds": [
-    { "protocol": "freedom", "settings": {} }
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
   ]
 }

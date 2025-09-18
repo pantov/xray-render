@@ -1,0 +1,15 @@
+version: "1.0"
+
+services:
+  - name: xray-vpn
+    type: service
+    ports:
+      - port: 80
+        protocol: HTTP
+      - port: 443
+        protocol: HTTP
+    build:
+      type: docker
+      dockerfile: Dockerfile
+    run:
+      cmd: ["xray", "-config", "/etc/xray/config.json"]
